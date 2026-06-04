@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --dendo-blue: #16427D;
+  --dendo-blue-dark: #0a244a;
+  --dendo-blue-light: #7ca3f0;
+  --dendo-white: #ffffff;
+  --dendo-text-dark: #1e293b;
+  --dendo-gray: #f4f6fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dendo-white);
+  color: var(--dendo-text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}

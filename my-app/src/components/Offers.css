@@ -1,0 +1,506 @@
+/* =========================
+   OFFERS SECTION ONLY
+========================= */
+
+.unique-offers-section {
+  width: 100%;
+  padding: 110px 70px;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.unique-offers-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.unique-offer-card {
+  flex: 1;
+  max-width: 430px;
+  min-height: 360px;
+
+  padding: 42px;
+
+  border-radius: 28px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+
+  transition:
+    transform 0.7s ease,
+    box-shadow 0.7s ease,
+    opacity 0.7s ease;
+
+  z-index: 1;
+
+  opacity: 0;
+
+  transform:
+    translateY(180px)
+    scale(0.6)
+    rotate(-12deg);
+
+  filter: blur(12px);
+}
+
+/* =========================
+   SHOW ON SCROLL
+========================= */
+
+.unique-show-card {
+  opacity: 1;
+
+  transform:
+    translateY(0px)
+    scale(1);
+
+  filter: blur(0);
+
+  animation:
+    uniqueSplashBounce 1.4s cubic-bezier(.17,.84,.44,1);
+}
+
+.unique-offer-card:nth-child(2).unique-show-card {
+  animation-delay: 0.3s;
+}
+
+/* =========================
+   CARD COLORS
+========================= */
+
+.unique-card-blue {
+  background: linear-gradient(
+    135deg,
+    #84ACFC,
+    #5d8df5
+  );
+
+  color: white;
+}
+
+.unique-card-light {
+  background: linear-gradient(
+    135deg,
+    #E5E2E1,
+    #e6ded8
+  );
+
+  color: #082142;
+}
+
+/* =========================
+   LIQUID BACKGROUND
+========================= */
+
+.unique-offer-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 340px;
+  height: 340px;
+
+  top: -120px;
+  right: -90px;
+
+  z-index: -1;
+
+  opacity: 0.8;
+
+  border-radius:
+    60% 40% 30% 70% /
+    60% 30% 70% 40%;
+
+  animation:
+    uniqueLiquidMorph 8s ease-in-out infinite,
+    uniqueBlobFloat 10s ease-in-out infinite;
+}
+
+.unique-offer-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  bottom: -120px;
+  left: -80px;
+
+  z-index: -1;
+
+  opacity: 0.5;
+
+  border-radius:
+    30% 70% 70% 30% /
+    30% 30% 70% 70%;
+
+  animation:
+    uniqueLiquidMorph2 9s ease-in-out infinite,
+    uniqueBlobFloat2 12s ease-in-out infinite;
+}
+
+/* =========================
+   BLUE GLOW
+========================= */
+
+.unique-card-blue::before,
+.unique-card-blue::after {
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,0.22) 0%,
+      rgba(255,255,255,0.02) 70%
+    );
+}
+
+/* =========================
+   LIGHT GLOW
+========================= */
+
+.unique-card-light::before,
+.unique-card-light::after {
+  background:
+    radial-gradient(
+      circle,
+      rgba(8,33,66,0.12) 0%,
+      rgba(8,33,66,0.02) 70%
+    );
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.unique-offer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 38px;
+}
+
+.unique-offer-badge {
+  padding: 8px 18px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  animation: uniqueBadgePulse 2.6s ease-in-out infinite;
+}
+
+.unique-badge-orange {
+  background: #ffb03a;
+  color: #082142;
+}
+
+.unique-badge-dark {
+  background: #082142;
+  color: white;
+}
+
+.unique-offer-icon {
+  width: 28px;
+  height: 28px;
+
+  transform-origin: 50% 50%;
+
+  animation: uniqueIconWobble 4.4s ease-in-out infinite;
+}
+
+.unique-offer-card:hover .unique-offer-icon {
+  animation-duration: 2.2s;
+}
+
+.unique-offer-body {
+  flex: 1;
+}
+
+.unique-offer-title {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.unique-offer-desc {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.unique-offer-footer {
+  margin-top: 40px;
+  padding-top: 24px;
+}
+
+.unique-card-blue .unique-offer-footer {
+  border-top: 1px solid rgba(255,255,255,0.18);
+}
+
+.unique-card-light .unique-offer-footer {
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.unique-offer-code {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 3px;
+
+  animation: uniqueCodeFloat 3.2s ease-in-out infinite;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.unique-offer-card:hover {
+  transform:
+    translateY(-14px)
+    scale(1.03);
+
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   TITLE BELOW
+========================= */
+
+.unique-offers-title-container {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.unique-section-title-centered {
+  font-size: 52px;
+  font-weight: 900;
+  color: #00295D;
+  letter-spacing: -1px;
+  margin-bottom: -40px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes uniqueSplashBounce {
+
+  0%{
+    transform:
+      translateY(180px)
+      scale(0.6)
+      rotate(-12deg);
+  }
+
+  45%{
+    transform:
+      translateY(-20px)
+      scale(1.06)
+      rotate(5deg);
+  }
+
+  70%{
+    transform:
+      translateY(10px)
+      scale(0.97)
+      rotate(-2deg);
+  }
+
+  100%{
+    transform:
+      translateY(0px)
+      scale(1)
+      rotate(0deg);
+  }
+}
+
+@keyframes uniqueIconWobble {
+
+  0%{
+    transform: rotate(0deg) scale(1);
+  }
+
+  20%{
+    transform: rotate(12deg) scale(1.08);
+  }
+
+  45%{
+    transform: rotate(-10deg) scale(1);
+  }
+
+  70%{
+    transform: rotate(8deg) scale(1.05);
+  }
+
+  100%{
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes uniqueBadgePulse {
+
+  0%{
+    transform: scale(1);
+  }
+
+  50%{
+    transform: scale(1.08);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes uniqueCodeFloat {
+
+  0%{
+    transform: translateX(0px);
+  }
+
+  50%{
+    transform: translateX(6px);
+  }
+
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes uniqueLiquidMorph {
+
+  0%{
+    border-radius:
+      60% 40% 30% 70% /
+      60% 30% 70% 40%;
+  }
+
+  50%{
+    border-radius:
+      30% 70% 50% 50% /
+      30% 50% 50% 70%;
+  }
+
+  100%{
+    border-radius:
+      60% 40% 30% 70% /
+      60% 30% 70% 40%;
+  }
+}
+
+@keyframes uniqueLiquidMorph2 {
+
+  0%{
+    border-radius:
+      30% 70% 70% 30% /
+      30% 30% 70% 70%;
+  }
+
+  50%{
+    border-radius:
+      70% 30% 40% 60% /
+      40% 60% 40% 60%;
+  }
+
+  100%{
+    border-radius:
+      30% 70% 70% 30% /
+      30% 30% 70% 70%;
+  }
+}
+
+@keyframes uniqueBlobFloat {
+
+  0%{
+    transform:
+      translateY(0px)
+      translateX(0px);
+  }
+
+  50%{
+    transform:
+      translateY(22px)
+      translateX(-15px);
+  }
+
+  100%{
+    transform:
+      translateY(0px)
+      translateX(0px);
+  }
+}
+
+@keyframes uniqueBlobFloat2 {
+
+  0%{
+    transform:
+      translateY(0px)
+      translateX(0px);
+  }
+
+  50%{
+    transform:
+      translateY(-18px)
+      translateX(18px);
+  }
+
+  100%{
+    transform:
+      translateY(0px)
+      translateX(0px);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .unique-offers-section {
+    padding: 80px 24px;
+  }
+
+  .unique-offers-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .unique-offer-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .unique-offers-title-container {
+    margin-top: 120px;
+  }
+
+  .unique-section-title-centered {
+    font-size: 38px;
+  }
+
+  .unique-offer-title {
+    font-size: 28px;
+  }
+}

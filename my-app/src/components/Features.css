@@ -1,0 +1,275 @@
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.features {
+  padding: 90px 70px;
+  background: #f5f5f5;
+  width: 100%;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+
+.features-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 90px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* =========================
+   IMAGE SECTION
+========================= */
+
+.features-images {
+  flex: 1;
+
+  display: flex;
+  gap: 16px;
+
+  max-width: 600px;
+}
+
+/* =========================
+   COLUMN
+========================= */
+
+.feat-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* Removed flex: 1 to prevent columns from stretching and causing extra visual gaps */
+}
+
+.feat-col-left {
+  align-items: flex-end; /* Align inner edges to the center gap */
+}
+
+/* RIGHT COLUMN LOWER */
+
+.feat-col-right {
+  margin-top: 60px;
+  align-items: flex-start; /* Align inner edges to the center gap */
+}
+
+/* =========================
+   COMMON IMAGE STYLE
+========================= */
+
+.feat-img-container {
+  overflow: hidden;
+
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+
+  background: white;
+}
+
+.feat-img-container img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* =========================
+   PHONE IMAGE
+========================= */
+
+.img-phone {
+  width: 260px;
+  height: 320px;
+
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+}
+
+/* =========================
+   DRIVER IMAGE
+========================= */
+
+.img-driver {
+  width: 220px;
+  height: 260px;
+
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+}
+
+/* =========================
+   MAP IMAGE
+========================= */
+
+.img-map {
+  width: 220px;
+  height: 260px;
+
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+}
+
+/* =========================
+   FOOD IMAGE
+========================= */
+
+.img-food {
+  width: 260px;
+  height: 320px;
+
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+}
+
+/* =========================
+   TEXT CONTENT
+========================= */
+
+.features-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.features-title {
+  color: #104284;
+
+  font-size: 52px;
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  margin-bottom: 24px;
+
+  letter-spacing: -1px;
+}
+
+.features-description {
+  color: #104284;
+
+  font-size: 21px;
+
+  line-height: 1.7;
+
+  font-weight: 500;
+
+  opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+
+  .features {
+    padding: 60px 24px;
+  }
+
+  .features-grid {
+    flex-direction: column-reverse;
+
+    text-align: center;
+
+    gap: 60px;
+  }
+
+  .features-images {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 24px;
+  }
+
+  .feat-col {
+    align-items: center;
+  }
+
+  .feat-col-right {
+    margin-top: 0;
+  }
+
+  .img-phone,
+  .img-food {
+    width: 320px;
+    height: 400px;
+  }
+
+  .img-driver,
+  .img-map {
+    width: 280px;
+    height: 320px;
+  }
+
+  .features-title {
+    font-size: 40px;
+  }
+
+  .features-description {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+/* INITIAL STATE: hidden & offset */
+/* =========================
+   SCROLL ANIMATIONS (FIXED)
+========================= */
+
+/* INITIAL STATE */
+.slide-from-left,
+.slide-from-right,
+.slide-from-bottom,
+.slide-from-bottom-right {
+  opacity: 0;
+  transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* START POSITIONS */
+.slide-from-left {
+  transform: translateX(-120px) rotate(-8deg);
+}
+
+.slide-from-right {
+  transform: translateX(120px) rotate(8deg);
+}
+
+.slide-from-bottom {
+  transform: translateY(120px) rotate(5deg);
+}
+
+.slide-from-bottom-right {
+  transform: translate(100px, 100px) rotate(-6deg);
+}
+
+/* =========================
+   FINAL STATE (ALL TOGETHER)
+========================= */
+
+.animate-in .slide-from-left,
+.animate-in .slide-from-right,
+.animate-in .slide-from-bottom,
+.animate-in .slide-from-bottom-right {
+  opacity: 1;
+  transform: translate(0, 0) rotate(0);
+  transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* TEXT ANIMATION */
+.features-content {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.features-content.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}

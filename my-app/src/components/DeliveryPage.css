@@ -1,0 +1,261 @@
+.delivery-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+.delivery-hero {
+  background: radial-gradient(circle at 70% 50%, #1a4d96 0%, #071a35 100%);
+  padding: 180px 0 140px;
+  min-height: 700px;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 0 0 50% 50% / 0 0 40px 40px;
+  overflow: hidden;
+}
+
+.delivery-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.delivery-hero-content {
+  flex: 1;
+}
+
+.delivery-hero .hero-badge {
+  display: inline-block;
+  background: #113f8c;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.delivery-title {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.delivery-subtitle {
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.8;
+  max-width: 550px;
+  margin-bottom: 40px;
+}
+
+.hero-features {
+  display: flex;
+  gap: 16px;
+}
+
+.feature-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.5px;
+}
+
+.pill-icon {
+  font-size: 16px;
+  color: #7ca3f0;
+}
+
+/* AVAILABILITY CARD */
+.availability-card-container {
+  flex: 0 0 420px;
+}
+
+.availability-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 50px 40px;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.3);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.availability-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.availability-form select,
+.availability-form input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 20px;
+  color: white;
+  font-size: 14px;
+  font-family: inherit;
+  appearance: none;
+  transition: all 0.3s ease;
+}
+
+.availability-form option {
+  background-color: #104284;
+  color: white;
+}
+
+.availability-form select:focus,
+.availability-form input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.select-icon {
+  position: absolute;
+  right: 20px;
+  font-size: 12px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn-check-availability {
+  background-color: #0d47a1;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn-check-availability:hover {
+  background-color: #1565c0;
+}
+
+/* ================= REQUEST SECTION ================= */
+.request-section {
+  padding: 120px 0;
+  background-color: white;
+}
+
+.request-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.request-card {
+  background-color: #104284;
+  border-radius: 60px;
+  padding: 100px 60px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 40px 100px rgba(13, 71, 161, 0.2);
+}
+
+.request-title {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.request-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+.btn-request-area {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-request-area:hover {
+  background: white;
+  color: #104284;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .delivery-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+  .delivery-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-features {
+    justify-content: center;
+  }
+  .delivery-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .request-card {
+    padding: 60px 30px;
+    border-radius: 40px;
+  }
+  .request-title {
+    font-size: 32px;
+  }
+}

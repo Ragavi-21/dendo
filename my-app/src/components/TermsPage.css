@@ -1,0 +1,228 @@
+/* TermsPage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= PAGE ================= */
+
+.terms-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #104284;
+
+  padding: 22px 28px;
+
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+.terms-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+
+  padding-right: 18px;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.terms-header-left {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.back-btn {
+  width: 52px;
+  height: 52px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(8px);
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+
+.back-btn:hover {
+  background: white;
+
+  transform: translateX(-4px) scale(1.05);
+
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+/* CHANGE ARROW COLOR */
+
+.back-btn:hover .back-icon {
+  color: #0c448f;
+}
+
+/* CLICK EFFECT */
+
+.back-btn:active {
+  transform: scale(0.94);
+}
+
+/* ================= ICON ================= */
+
+.back-icon {
+  color: white;
+
+  font-size: 18px;
+
+  transition: color 0.3s ease;
+}
+
+/* ================= TITLE ================= */
+
+.terms-title {
+  color: white;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+/* ================= LOGO ================= */
+
+.dendo-logo {
+  height: 100px;
+  width: 250px;
+
+  object-fit: contain;
+
+  margin-right: 25px;
+}
+
+/* ================= CONTENT WRAPPER ================= */
+
+.terms-content-wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= CONTENT BOX ================= */
+
+.terms-content {
+  width: 92%;
+
+  min-height: 720px;
+
+  background: #f5f7fb;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+
+  padding: 50px;
+}
+.terms-content h2{
+  font-size: 36px;
+  color: #0c448f;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.terms-content h3{
+  margin-top: 35px;
+  margin-bottom: 15px;
+  color: #0c448f;
+  font-size: 24px;
+}
+
+.terms-content p{
+  color: #444;
+  line-height: 1.9;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.terms-content ul{
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+.terms-content li{
+  margin-bottom: 10px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.terms-content hr{
+  margin: 30px 0;
+  border: none;
+  height: 1px;
+  background: #d9e2f2;
+}
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .terms-page {
+    padding: 18px;
+  }
+
+  .terms-header {
+    align-items: center;
+
+    padding-right: 0;
+  }
+
+  .terms-header-left {
+    gap: 12px;
+  }
+
+  .back-btn {
+    width: 46px;
+    height: 46px;
+  }
+
+  .back-icon {
+    font-size: 16px;
+  }
+
+  .terms-title {
+    font-size: 20px;
+  }
+
+  .dendo-logo {
+    height: 44px;
+
+    margin-right: 0;
+  }
+
+  .terms-content {
+    width: 100%;
+
+    min-height: 550px;
+
+    padding: 28px 22px;
+  }
+}

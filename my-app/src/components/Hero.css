@@ -1,0 +1,281 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px 60px;
+  max-width: 1440px;
+  height: 1000px;
+  margin: 0 auto;
+  gap: 60px;
+  position: relative;
+  color: white;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.hero-content {
+  flex: 1;
+  max-width: 700px;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2px;
+  margin-bottom: 26px;
+  white-space: nowrap;
+}
+
+.hero-subtitle {
+  font-size: 25px;
+  line-height: 1.7;
+  margin-bottom: 42px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.hero-dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 20;
+}
+
+.btn-partner-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 18px 40px;
+  border: none;
+  border-radius: 50px;
+
+  background: white;
+  color: #104284;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-icon {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.hero-dropdown:hover .btn-partner-dropdown {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+
+.hero-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 200px;
+  padding: 10px;
+
+  background: white;
+
+  border-radius: 16px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: all 0.3s ease;
+}
+
+.hero-dropdown:hover .hero-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.hero-dropdown-menu a {
+  padding: 14px 20px;
+  border-radius: 10px;
+
+  color: #071a35;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.hero-dropdown-menu a:hover {
+  background: #f1f5f9;
+  color: #113f8c;
+}
+
+/* =========================
+   IMAGE SECTION
+========================= */
+
+.hero-images {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  position: relative;
+
+  height: 100%;
+  z-index: 5;
+
+  overflow: visible;
+
+  margin-left: -70px;
+}
+
+.image-collage {
+  position: relative;
+  width: 920px;
+  height: 900px;
+  margin-top: 40px;
+}
+
+.img-container {
+  position: absolute;
+  overflow: hidden;
+
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   IMAGE POSITIONS
+========================= */
+
+.img-top-dark {
+  width: 520px;
+  height: 760px;
+  top: 70px;
+  left: 240px;
+
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+
+  z-index: 1;
+}
+
+.img-right-noodles,
+.img-bottom-biryani {
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+  border: 12px solid white;
+
+  z-index: 3;
+}
+
+.img-right-noodles {
+  top: 100px;
+  left: 650px;
+}
+
+.img-bottom-biryani {
+  top: 580px;
+  left: 40px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 24px 80px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    max-width: 100%;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    margin-inline: auto;
+  }
+
+  .hero-images {
+    justify-content: center;
+    width: 100%;
+    min-height: 600px;
+    margin-right: 0;
+  }
+
+  .image-collage {
+    width: 100%;
+    max-width: 500px;
+    height: 560px;
+  }
+
+  .img-top-dark {
+    width: 360px;
+    height: 460px;
+
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .img-right-noodles {
+    width: 180px;
+    height: 180px;
+
+    right: 0;
+    left: auto;
+  }
+
+  .img-bottom-biryani {
+    width: 220px;
+    height: 220px;
+    left: 0;
+  }
+}

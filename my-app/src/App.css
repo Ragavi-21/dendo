@@ -1,0 +1,10 @@
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero-section-wrapper {
+  background-color: #16427D;
+  height: 800px;
+  position: relative;
+}

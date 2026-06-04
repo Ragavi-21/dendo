@@ -1,0 +1,27 @@
+# Dendo
+
+> Dendo is a hyperlocal food delivery and partner platform connecting customers with local restaurants, vendors, and delivery drivers across India.
+
+## Main Pages
+
+- [Home](https://amazing-nougat-742e37.netlify.app/): Landing page with hero section, features overview, value propositions, and exclusive offers.
+- [About Us](https://amazing-nougat-742e37.netlify.app/about): Company philosophy, mission, vision, and hyperlocal delivery approach.
+- [Contact Us](https://amazing-nougat-742e37.netlify.app/contact): Contact form and business inquiry details.
+- [Delivery Areas](https://amazing-nougat-742e37.netlify.app/delivery): Coverage map and list of active delivery zones.
+- [Become a Vendor](https://amazing-nougat-742e37.netlify.app/vendor): Information and registration for restaurant and store partners.
+- [Join as Driver](https://amazing-nougat-742e37.netlify.app/driver): Driver partner signup and benefits overview.
+- [Request Zone](https://amazing-nougat-742e37.netlify.app/request-zone): Request Dendo service expansion to your area.
+
+## Legal
+
+- [Terms of Service](https://amazing-nougat-742e37.netlify.app/terms)
+- [Privacy Policy](https://amazing-nougat-742e37.netlify.app/privacy-policy)
+
+## Key Information
+
+- **Company**: Dendo
+- **Industry**: Hyperlocal food delivery, local commerce
+- **Focus Areas**: Fast delivery, smart logistics, vendor partnerships, community-driven commerce
+- **Coverage**: Cities across India
+- **Mission**: To build India's most accessible hyperlocal commerce ecosystem
+- **Vision**: To become the digital infrastructure powering local commerce across India
