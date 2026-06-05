@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState, useCallback } from 'react';
+import SplashScreen from './components/SplashScreen';
 
 import {
   BrowserRouter,
@@ -75,7 +76,13 @@ const PageLoader = () => (
 );
 
 function App() {
+  const [splashDone, setSplashDone] = useState(false);
+  const handleSplashFinish = useCallback(() => setSplashDone(true), []);
+
   return (
+    <>
+      {!splashDone && <SplashScreen onFinish={handleSplashFinish} />}
+      <div style={{ visibility: splashDone ? 'visible' : 'hidden' }}>
     <BrowserRouter>
       <Routes>
 
@@ -157,6 +164,8 @@ function App() {
 
       </Routes>
     </BrowserRouter>
+      </div>
+    </>
   );
 }
 

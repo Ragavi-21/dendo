@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import "./DeliveryPage.css";
 import {
@@ -6,7 +6,7 @@ import {
   FaChevronDown,
 } from "react-icons/fa";
 import { BiTargetLock } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const locationData = {
   "Tamil Nadu": {
@@ -1119,6 +1119,8 @@ const locationData = {
 };
 
 const DeliveryPage = () => {
+  const navigate = useNavigate();
+
   const [selectedState, setSelectedState] =
     useState("Tamil Nadu");
 
@@ -1127,6 +1129,9 @@ const DeliveryPage = () => {
 
   const [selectedArea, setSelectedArea] =
     useState("");
+
+  const [availabilityStatus, setAvailabilityStatus] =
+    useState(null); // null | 'available' | 'unavailable'
 
   const states = Object.keys(locationData);
 
@@ -1138,6 +1143,36 @@ const DeliveryPage = () => {
     selectedState && selectedDistrict
       ? locationData[selectedState][selectedDistrict]
       : [];
+
+  const handleCheckAvailability = useCallback(() => {
+    // If selection is incomplete, prompt user
+    if (!selectedState || !selectedDistrict || !selectedArea) {
+      setAvailabilityStatus('incomplete');
+      return;
+    }
+
+    // Verify the selected area exists in locationData
+    const stateData = locationData[selectedState];
+    if (!stateData) {
+      navigate('/request-zone');
+      return;
+    }
+
+    const districtAreas = stateData[selectedDistrict];
+    if (!districtAreas) {
+      navigate('/request-zone');
+      return;
+    }
+
+    const isAvailable = districtAreas.includes(selectedArea);
+
+    if (isAvailable) {
+      setAvailabilityStatus('available');
+    } else {
+      // Area not in our delivery list → navigate to request zone
+      navigate('/request-zone');
+    }
+  }, [selectedState, selectedDistrict, selectedArea, navigate]);
 
   return (
     <div className="delivery-page">
@@ -1197,6 +1232,7 @@ const DeliveryPage = () => {
                         setSelectedState(e.target.value);
                         setSelectedDistrict("");
                         setSelectedArea("");
+                        setAvailabilityStatus(null);
                       }}
                     >
                       {states.map((state) => (
@@ -1222,6 +1258,7 @@ const DeliveryPage = () => {
                           e.target.value
                         );
                         setSelectedArea("");
+                        setAvailabilityStatus(null);
                       }}
                     >
                       <option value="">
@@ -1249,9 +1286,10 @@ const DeliveryPage = () => {
                   <div className="select-wrapper">
                     <select
                       value={selectedArea}
-                      onChange={(e) =>
-                        setSelectedArea(e.target.value)
-                      }
+                      onChange={(e) => {
+                        setSelectedArea(e.target.value);
+                        setAvailabilityStatus(null);
+                      }}
                     >
                       <option value="">
                         Choose Area
@@ -1271,9 +1309,45 @@ const DeliveryPage = () => {
                   </div>
                 </div>
 
-                <button className="btn-check-availability">
+                <button
+                  className="btn-check-availability"
+                  onClick={handleCheckAvailability}
+                >
                   CHECK AVAILABILITY
                 </button>
+
+                {/* Availability status message */}
+                {availabilityStatus === 'available' && (
+                  <div className="availability-msg available">
+                    <span className="msg-icon">✓</span>
+                    <div className="msg-text">
+                      <strong>Delivery Available!</strong>
+                      <p>We deliver to {selectedArea}, {selectedDistrict}, {selectedState}.</p>
+                    </div>
+                    <button
+                      className="msg-dismiss"
+                      onClick={() => setAvailabilityStatus(null)}
+                    >
+                      ×
+                    </button>
+                  </div>
+                )}
+
+                {availabilityStatus === 'incomplete' && (
+                  <div className="availability-msg incomplete">
+                    <span className="msg-icon">!</span>
+                    <div className="msg-text">
+                      <strong>Selection Incomplete</strong>
+                      <p>Please select a state, district, and area to check availability.</p>
+                    </div>
+                    <button
+                      className="msg-dismiss"
+                      onClick={() => setAvailabilityStatus(null)}
+                    >
+                      ×
+                    </button>
+                  </div>
+                )}
 
               </div>
             </div>
