@@ -223,7 +223,7 @@ const SplashScreen = ({ onFinish }) => {
           letter-spacing: 0.2em;
           text-transform: uppercase;
           margin: 0;
-          max-width: 320px;
+          max-width: 450px;
         }
         .sp-tagline-char {
           display: inline-block;
