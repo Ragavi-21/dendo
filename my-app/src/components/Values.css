@@ -220,10 +220,27 @@
   }
 
   .values-section {
-    padding: 70px 24px;
+    padding: 70px 16px;
+  }
+
+  .values-title {
+    font-size: 28px;
+  }
+
+  .values-subtitle {
+    font-size: 14px;
+  }
+
+  .value-card {
+    padding: 28px 22px;
   }
 
   .hover-expand-card {
-    width: 300px;
+    width: 280px;
+    display: none;
+  }
+
+  .values-header {
+    margin-bottom: 40px;
   }
 }

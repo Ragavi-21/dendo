@@ -218,7 +218,7 @@
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE - TABLET
 ========================= */
 
 @media (max-width: 1024px) {
@@ -226,7 +226,8 @@
   .hero {
     flex-direction: column;
     height: auto;
-    padding: 40px 24px 80px;
+    padding: 120px 24px 80px;
+    gap: 40px;
   }
 
   .hero-content {
@@ -235,8 +236,9 @@
   }
 
   .hero-title {
-    font-size: 48px;
-    max-width: 100%;
+    font-size: 42px;
+    white-space: normal;
+    letter-spacing: -1px;
   }
 
   .hero-subtitle {
@@ -244,38 +246,138 @@
     margin-inline: auto;
   }
 
+  .hero-dropdown {
+    display: flex;
+    justify-content: center;
+  }
+
   .hero-images {
     justify-content: center;
     width: 100%;
-    min-height: 600px;
+    min-height: 500px;
+    margin-left: 0;
     margin-right: 0;
   }
 
   .image-collage {
     width: 100%;
     max-width: 500px;
-    height: 560px;
+    height: 500px;
+    margin-top: 0;
   }
 
   .img-top-dark {
-    width: 360px;
-    height: 460px;
+    width: 300px;
+    height: 420px;
 
     left: 50%;
     transform: translateX(-50%);
+    top: 30px;
   }
 
   .img-right-noodles {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
 
-    right: 0;
+    right: 10px;
     left: auto;
+    top: 60px;
   }
 
   .img-bottom-biryani {
+    width: 160px;
+    height: 160px;
+    left: 10px;
+    top: 360px;
+  }
+}
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 100px 16px 50px;
+    gap: 30px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+    margin-bottom: 18px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .btn-partner-dropdown {
+    padding: 14px 30px;
+    font-size: 14px;
+  }
+
+  .hero-images {
+    min-height: 380px;
+  }
+
+  .image-collage {
+    max-width: 340px;
+    height: 380px;
+  }
+
+  .img-top-dark {
     width: 220px;
-    height: 220px;
+    height: 300px;
+    top: 20px;
+  }
+
+  .img-right-noodles {
+    width: 120px;
+    height: 120px;
+    top: 40px;
+    right: 0;
+  }
+
+  .img-bottom-biryani {
+    width: 130px;
+    height: 130px;
     left: 0;
+    top: 260px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .image-collage {
+    max-width: 280px;
+    height: 320px;
+  }
+
+  .img-top-dark {
+    width: 180px;
+    height: 250px;
+  }
+
+  .img-right-noodles {
+    width: 100px;
+    height: 100px;
+  }
+
+  .img-bottom-biryani {
+    width: 110px;
+    height: 110px;
+    top: 220px;
   }
 }

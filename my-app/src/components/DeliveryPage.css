@@ -332,7 +332,7 @@
   .delivery-container {
     flex-direction: column;
     text-align: center;
-    gap: 60px;
+    gap: 40px;
   }
   .delivery-subtitle {
     margin-left: auto;
@@ -340,18 +340,109 @@
   }
   .hero-features {
     justify-content: center;
+    flex-wrap: wrap;
   }
   .delivery-title {
     font-size: 48px;
   }
+  .availability-card-container {
+    flex: none;
+    width: 100%;
+    max-width: 420px;
+  }
 }
 
 @media (max-width: 768px) {
-  .request-card {
-    padding: 60px 30px;
-    border-radius: 40px;
+  .delivery-hero {
+    padding: 140px 0 100px;
+    min-height: auto;
+    border-radius: 0 0 30% 30% / 0 0 30px 30px;
   }
+
+  .delivery-container {
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+  .delivery-title {
+    font-size: 36px;
+    letter-spacing: -0.5px;
+  }
+
+  .delivery-subtitle {
+    font-size: 16px;
+  }
+
+  .availability-card-container {
+    max-width: 100%;
+  }
+
+  .availability-card {
+    padding: 35px 24px;
+    border-radius: 28px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
+
+  .hero-features {
+    gap: 10px;
+  }
+
+  .feature-pill {
+    padding: 10px 16px;
+    font-size: 11px;
+  }
+
+  .request-section {
+    padding: 80px 0;
+  }
+
+  .request-container {
+    padding: 0 20px;
+  }
+
+  .request-card {
+    padding: 60px 24px;
+    border-radius: 30px;
+  }
+
   .request-title {
-    font-size: 32px;
+    font-size: 28px;
+  }
+
+  .request-desc {
+    font-size: 15px;
+  }
+
+  .btn-request-area {
+    padding: 14px 36px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .delivery-hero {
+    padding: 120px 0 80px;
+  }
+
+  .delivery-title {
+    font-size: 28px;
+  }
+
+  .delivery-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .request-title {
+    font-size: 24px;
+  }
+
+  .request-card {
+    padding: 50px 20px;
+    border-radius: 24px;
   }
 }

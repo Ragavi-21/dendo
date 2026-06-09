@@ -214,6 +214,52 @@
   }
 }
 
+@media (max-width: 600px) {
+
+  .features {
+    padding: 50px 16px;
+  }
+
+  .features-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .feat-col {
+    gap: 12px;
+  }
+
+  .img-phone,
+  .img-food {
+    width: 160px;
+    height: 200px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+
+  .img-driver,
+  .img-map {
+    width: 140px;
+    height: 170px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  .features-title {
+    font-size: 30px;
+  }
+
+  .features-description {
+    font-size: 15px;
+  }
+
+  .features-content {
+    max-width: 100%;
+  }
+}
+
 /* =========================
    SCROLL ANIMATIONS
 ========================= */

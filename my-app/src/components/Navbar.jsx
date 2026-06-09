@@ -1,11 +1,20 @@
 import { NavLink, Link } from 'react-router-dom';
-import { memo } from 'react';
-import { FaChevronDown } from 'react-icons/fa';
+import { memo, useState, useCallback } from 'react';
 import './Navbar.css';
 
 import logoImg from '../assets/logo.png';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = useCallback(() => {
+    setMenuOpen(prev => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setMenuOpen(false);
+  }, []);
+
   return (
     <nav className="navbar">
 
@@ -20,25 +29,42 @@ const Navbar = () => {
         </Link>
       </div>
 
+      {/* HAMBURGER BUTTON (mobile only) */}
+      <button
+        className={`hamburger-btn ${menuOpen ? 'hamburger-open' : ''}`}
+        onClick={toggleMenu}
+        aria-label="Toggle navigation menu"
+      >
+        <span className="hamburger-line" />
+        <span className="hamburger-line" />
+        <span className="hamburger-line" />
+      </button>
+
+      {/* OVERLAY (mobile only) */}
+      <div
+        className={`mobile-overlay ${menuOpen ? 'mobile-overlay--visible' : ''}`}
+        onClick={closeMenu}
+      />
+
       {/* NAV LINKS */}
-      <div className="navbar-links-container">
+      <div className={`navbar-links-container ${menuOpen ? 'navbar-links-container--open' : ''}`}>
 
         <ul className="navbar-links">
 
           <li>
-            <NavLink to="/about">
+            <NavLink to="/about" onClick={closeMenu}>
               About Us
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/contact">
+            <NavLink to="/contact" onClick={closeMenu}>
               Contact Us
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/delivery">
+            <NavLink to="/delivery" onClick={closeMenu}>
               Delivery Areas
             </NavLink>
           </li>

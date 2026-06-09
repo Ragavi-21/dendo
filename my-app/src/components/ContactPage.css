@@ -545,7 +545,7 @@ color: #16427D;
   .contact-hero {
     height: auto;
 
-    padding: 120px 25px 140px;
+    padding: 120px 20px 100px;
 
     text-align: center;
 
@@ -554,24 +554,34 @@ color: #16427D;
   }
 
   .contact-hero-title {
-    font-size: 42px;
+    font-size: 36px;
 
     line-height: 1.2;
+    letter-spacing: -1px;
   }
 
   .contact-hero-subtitle {
-    font-size: 18px;
+    font-size: 16px;
 
     line-height: 1.7;
+
+    margin-bottom: 80px;
+  }
+
+  .contact-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .contact-container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .contact-wrapper {
     padding: 0;
+    border-radius: 24px;
+    min-height: auto;
   }
 
   .form-row {
@@ -582,12 +592,17 @@ color: #16427D;
 
   .contact-form-side,
   .contact-info-side {
-    padding: 40px 25px;
+    padding: 35px 20px;
   }
 
   .contact-form-title,
   .info-card-title {
-    font-size: 30px;
+    font-size: 28px;
+  }
+
+  .contact-form-desc {
+    font-size: 15px;
+    margin-bottom: 35px;
   }
 
   .btn-send-message {
@@ -602,5 +617,67 @@ color: #16427D;
     gap: 20px;
 
     align-items: flex-start;
+  }
+
+  .info-card-desc {
+    font-size: 14px;
+    margin-bottom: 35px;
+  }
+
+  .contact-info-side {
+    border-radius: 0 0 24px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .contact-hero {
+    padding: 100px 16px 80px;
+  }
+
+  .contact-hero-title {
+    font-size: 28px;
+  }
+
+  .contact-hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 60px;
+  }
+
+  .contact-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .contact-form-side,
+  .contact-info-side {
+    padding: 28px 16px;
+  }
+
+  .contact-form-title,
+  .info-card-title {
+    font-size: 24px;
+  }
+
+  .contact-form {
+    gap: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .country-code,
+  .query-select {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .info-item {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .info-text span {
+    font-size: 14px;
   }
 }
