@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import "./RequestZone.css";
 
-import requestImg from "../assets/request.jpg";
+import requestImg from "../assets/request1.png";
 
 const RequestZone = () => {
 

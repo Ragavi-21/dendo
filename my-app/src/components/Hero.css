@@ -202,7 +202,7 @@
   height: 250px;
 
   border-radius: 50%;
-  border: 12px solid white;
+  border: 0px solid white;
 
   z-index: 3;
 }
