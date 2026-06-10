@@ -71,6 +71,13 @@ const Navbar = () => {
 
         </ul>
 
+        {/* MOBILE ACTIONS */}
+        <div className="navbar-mobile-actions">
+          <button className="btn-get-dendo-mobile">
+            GET DENDO
+          </button>
+        </div>
+
       </div>
 
       {/* BUTTON */}
