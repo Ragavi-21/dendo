@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import "./AboutPage.css";
 
 import heroFoodImg from "../assets/abouthero.jpg";
-import driverImg from "../assets/driver.jpg";
+import driverImg from "../assets/driver1.jpg";
 import tableImg from "../assets/Drinks.jpg";
 
 import {
