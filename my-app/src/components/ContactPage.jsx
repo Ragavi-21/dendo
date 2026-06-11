@@ -292,7 +292,7 @@ const ContactPage = () => {
 
                     <strong>CUSTOMER CARE</strong>
 
-                    <span>+91 98425 61234</span>
+                    <span>+91 87543 68593</span>
 
                   </div>
 
@@ -310,7 +310,7 @@ const ContactPage = () => {
 
                     <strong>SMS / WHATSAPP</strong>
 
-                    <span>+91 98745 63211</span>
+                    <span>+91 87543 68593</span>
 
                   </div>
 
@@ -328,7 +328,7 @@ const ContactPage = () => {
 
                     <strong>EMAIL</strong>
 
-                    <span>dendo@gmail.com</span>
+                    <span>support@dendo.store</span>
 
                   </div>
 
@@ -344,11 +344,11 @@ const ContactPage = () => {
 
                 <div className="social-icons">
 
-                  <a href="#" className="social-icon">
+                  <a href="https://www.instagram.com/dendo.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="social-icon">
                     <FaInstagram />
                   </a>
 
-                  <a href="#" className="social-icon">
+                  <a href="https://www.linkedin.com/company/dendo-store/" className="social-icon">
                     <FaLinkedinIn />
                   </a>
 
