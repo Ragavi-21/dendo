@@ -21,9 +21,9 @@
 }
 
 .navbar-logo-img {
-  width: 150px;
-  height: 100px;
-  object-fit: contain;
+  width: 160px;
+  height: 120px;
+  
 }
 
 .navbar-links-container {
@@ -142,11 +142,6 @@
   background-color: var(--dendo-white);
   color: var(--dendo-blue);
 }
-
-.navbar-mobile-actions {
-  display: none;
-}
-
 
 /* ================= HAMBURGER BUTTON ================= */
 
@@ -270,34 +265,6 @@
   .navbar-links li a.active {
     background-color: #16427D;
     color: white;
-  }
-
-  .navbar-mobile-actions {
-    display: block;
-    margin-top: 32px;
-    padding: 0 4px;
-    width: 100%;
-  }
-
-  .btn-get-dendo-mobile {
-    width: 100%;
-    background-color: var(--dendo-blue);
-    color: var(--dendo-white);
-    border: none;
-    padding: 14px 24px;
-    border-radius: 50px;
-    font-weight: 800;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: inherit;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(22, 66, 125, 0.15);
-  }
-
-  .btn-get-dendo-mobile:hover {
-    background-color: var(--dendo-blue-dark);
-    box-shadow: 0 6px 16px rgba(22, 66, 125, 0.25);
   }
 }
 
